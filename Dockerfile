@@ -15,7 +15,8 @@ RUN apt-get install --no-install-recommends -y build-essential \
     gcc-arm-none-eabi \
     binutils-arm-none-eabi \
     libnewlib-arm-none-eabi \
-    git
+    git \
+    curl
 
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
