@@ -1,3 +1,9 @@
+# Latest
+
+[![wercker status](https://app.wercker.com/status/293cfc624c23cc85221a26c2ae867a0e/m/ "wercker status")](https://app.wercker.com/project/byKey/293cfc624c23cc85221a26c2ae867a0e)
+
+[ ![Download](https://api.bintray.com/packages/namaco/generic/ergodox.hex/images/download.svg)](https://bintray.com/namaco/generic/ergodox.hex/_latestVersion)
+
 # Getting started
 
 There are two main ways you could customize the ErgoDox (EZ and Infinity)
