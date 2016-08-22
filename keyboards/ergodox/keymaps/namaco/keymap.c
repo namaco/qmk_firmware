@@ -12,89 +12,89 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: OS X layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |   =    |   1  |   2  |   3  |   4  |   5  | ⌘ + →|           | `~   |   6  |   7  |   8  |   9  |   0  |   -    |
+ * | Esc    |   1  |   2  |   3  |   4  |   5  |  =   |           | `~   |   6  |   7  |   8  |   9  |   0  |   -    |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | Tab    |   Q  |   W  |   E  |   R  |   T  | ⌘ + ←|           |LMouse|   Y  |   U  |   I  |   O  |   P  |   \    |
+ * | Tab    |   Q  |   W  |   E  |   R  |   T  | Left |           | Right|   Y  |   U  |   I  |   O  |   P  |   \    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | CTRL   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |   '"   |
- * |--------+------+------+------+------+------| F20  |           | LFn  |------+------+------+------+------+--------|
- * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  | RShift |
+ * |--------+------+------+------+------+------| LGui+|           | LFn  |------+------+------+------+------+--------|
+ * | LShift |   Z  |   X  |   C  |   V  |   B  | Space|           |      |   N  |   M  |   ,  |   .  |   /  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |  cut | paste| copy | Left | Right|                                       |  Up  | Down |   [  |   ]  | LWin  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        | LGui | LAlt |       | Alt  | Esc  |
- *                                 ,------|------|------|       |------+--------+------.
- *                                 |      |      | Home |       | PgUp |        |      |
- *                                 |Space |Backsp|------|       |------| Delete |Enter |
- *                                 |      |ace   | End  |       | PgDn |        |      |
- *                                 `--------------------'       `----------------------'
+ *                                        | LGui | LAlt |       | Alt  |LMouse |
+ *                                 ,------|------|------|       |------+-------+------.
+ *                                 |      |      | Home |       | PgUp |       |      |
+ *                                 |Backsp|Delete|------|       |------| Enter |Space |
+ *                                 |ace   |      | End  |       | PgDn |       |      |
+ *                                 `--------------------'       `---------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
 // Otherwise, it needs KC_*
 [OSX] = KEYMAP(  // layer 0 : default
         // left hand
-        KC_EQL,         KC_1,         KC_2,        KC_3,      KC_4,   KC_5,   LGUI(KC_RIGHT),
-        KC_TAB,         KC_Q,         KC_W,        KC_E,      KC_R,   KC_T,   LGUI(KC_LEFT),
+        KC_ESC,         KC_1,         KC_2,        KC_3,      KC_4,   KC_5,   KC_EQL,
+        KC_TAB,         KC_Q,         KC_W,        KC_E,      KC_R,   KC_T,   KC_LEFT,
         KC_LCTL,        KC_A,         KC_S,        KC_D,      KC_F,   KC_G,
         KC_LSFT,        KC_Z,         KC_X,        KC_C,      KC_V,   KC_B,   LGUI(KC_SPC),
         LGUI(KC_X), LGUI(KC_V), LGUI(KC_C),     KC_LEFT,   KC_RGHT,
                                                                KC_LGUI,       KC_LALT,
                                                                               KC_HOME,
-                                                               KC_SPC,KC_BSPC,KC_END,
+                                                               KC_BSPC,KC_DELT,KC_END,
         // right hand
              KC_GRV,      KC_6,   KC_7,   KC_8,   KC_9,   KC_0,             KC_MINS,
-             TO(MOUSE,1), KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,             KC_BSLS,
+             KC_RGHT, KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,             KC_BSLS,
                           KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,          KC_QUOT,
              MO(FN),      KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,          KC_RSFT,
                                   KC_UP,  KC_DOWN,KC_LBRC,KC_RBRC,          TO(WINDOWS,1),
-             KC_LALT,        KC_ESC,
+             KC_LALT,TO(MOUSE,1),
              KC_PGUP,
-             KC_PGDN,KC_DELT,KC_ENT
+             KC_PGDN,KC_ENT,KC_SPC
     ),
 
 /* Keymap 1: Windows layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |   =    |   1  |   2  |   3  |   4  |   5  | A + →|           |  `~  |   6  |   7  |   8  |   9  |   0  |   -    |
+ * | Esc    |   1  |   2  |   3  |   4  |   5  |   =  |           |  `~  |   6  |   7  |   8  |   9  |   0  |   -    |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | Tab    |   Q  |   W  |   E  |   R  |   T  | A + ←|           |LMouse|   Y  |   U  |   I  |   O  |   P  |   \    |
+ * | Tab    |   Q  |   W  |   E  |   R  |   T  | Left |           | Right|   Y  |   U  |   I  |   O  |   P  |   \    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | CTRL   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |   '"   |
- * |--------+------+------+------+------+------| F20  |           | LFn  |------+------+------+------+------+--------|
- * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  | RShift |
+ * |--------+------+------+------+------+------| LGui+|           | LFn  |------+------+------+------+------+--------|
+ * | LShift |   Z  |   X  |   C  |   V  |   B  | Space|           |      |   N  |   M  |   ,  |   .  |   /  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |  cut | paste| copy | Left | Right|                                       |  Up  | Down |   [  |   ]  | LMac |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        | LGui | LAlt |       | Alt  | Esc  |
- *                                 ,------|------|------|       |------+--------+------.
- *                                 |      |      | Home |       | PgUp |        |      |
- *                                 |Space |Backsp|------|       |------| Delete |Enter |
- *                                 |      |ace   | End  |       | PgDn |        |      |
- *                                 `--------------------'       `----------------------'
+ *                                        | LGui | LAlt |       | Alt  |LMouse |
+ *                                 ,------|------|------|       |------+-------+------.
+ *                                 |      |      | Home |       | PgUp |       |      |
+ *                                 |Backsp|Delete|------|       |------| Enter |Space |
+ *                                 |ace   |      | End  |       | PgDn |       |      |
+ *                                 `--------------------'       `---------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
 // Otherwise, it needs KC_*
 [WINDOWS] = KEYMAP(  // layer 0 : default
         // left hand
-        KC_EQL,         KC_1,         KC_2,   KC_3,   KC_4,   KC_5,   LALT(KC_RIGHT),
+        KC_ESC,         KC_1,         KC_2,   KC_3,   KC_4,   KC_5,   KC_EQL,
         KC_TAB,         KC_Q,         KC_W,   KC_E,   KC_R,   KC_T,   LALT(KC_LEFT),
         KC_LCTL,        KC_A,         KC_S,   KC_D,   KC_F,   KC_G,
-        KC_LSFT,        KC_Z,         KC_X,   KC_C,   KC_V,   KC_B,   LGUI(KC_SPC),
+        KC_LSFT,        KC_Z,         KC_X,   KC_C,   KC_V,   KC_B,   MEH_T(KC_SPC),
         LCTL(KC_X),     LCTL(KC_V),   LCTL(KC_C),   KC_LEFT,  KC_RGHT,
                                                KC_LGUI,       KC_LALT,
                                                               KC_HOME,
-                                                KC_SPC,KC_BSPC,KC_END,
+                                                KC_BSPC,KC_DELT,KC_END,
         // right hand
              KC_GRV,      KC_6,   KC_7,   KC_8,   KC_9,   KC_0,             KC_MINS,
              TO(MOUSE,1), KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,             KC_BSLS,
                           KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,          KC_QUOT,
              MO(FN),      KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,          KC_RSFT,
                                   KC_UP,  KC_DOWN,KC_LBRC,KC_RBRC,          TO(OSX,1),
-             KC_LALT,        KC_ESC,
-             KC_PGUP,
-             KC_PGDN,KC_DELT, KC_ENT
+              KC_LALT,TO(MOUSE,1),
+              KC_PGUP,
+              KC_PGDN,KC_ENT,KC_SPC
     ),
 
 /* Keymap 2: Function Layer
