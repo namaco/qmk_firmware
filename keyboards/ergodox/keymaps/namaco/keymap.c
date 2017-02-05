@@ -103,10 +103,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |        |  F1  |  F2  |  F3  |  F4  |  F5  | F6   |           | F7   |  F8  |  F9  | F10  | F11  | F12  |LGui+Sp |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |        |      |      |      |      |      |S+⌘+3 |           |      |      |      |      |      |      |        |
+ * |        |      |      |      |      |      |S+⌘+3 |           | S+⌘+4|      |      |      |      |      |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        | ⌘+A  | ⌘+S  |      | ⌘+F  | ⌘+G  |------|           |------|      |      |      |      |      |        |
- * |--------+------+------+------+------+------|S+⌘+4 |           |      |------+------+------+------+------+--------|
+ * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        | ⌘+Z  | ⌘+X  | ⌘+C  | ⌘+V  |      |      |           |      |      |      |      |      |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |      |      |      |      |                                       |      |      |      |      |LMouse|
@@ -128,14 +128,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS,       KC_F1,      KC_F2,       KC_F3,       KC_F4,      KC_F5,   KC_F6,
        KC_TRNS,     KC_TRNS,      KC_TRNS,     KC_TRNS,     KC_TRNS,    KC_TRNS, LGUI(LSFT(KC_3)),
        KC_TRNS,     LGUI(KC_A),   LGUI(KC_S),  KC_TRNS,     LGUI(KC_F), LGUI(KC_G),
-       KC_TRNS,     LGUI(KC_Z),   LGUI(KC_X),  LGUI(KC_C),  LGUI(KC_V), KC_TRNS, LGUI(LSFT(KC_4)),
+       KC_TRNS,     LGUI(KC_Z),   LGUI(KC_X),  LGUI(KC_C),  LGUI(KC_V), KC_TRNS, KC_TRNS,
        KC_TRNS,     KC_TRNS,      KC_TRNS,     KC_TRNS,     KC_TRNS,
                                                                         KC_TRNS, KC_TRNS,
                                                                                  KC_TRNS,
                                                    LCTL(KC_SPC),LGUI(LSFT(KC_A)),KC_TRNS,
        // right hand
        KC_F7,     KC_F8,   KC_F9,  KC_F10,  KC_F11,  KC_F12,  LGUI(KC_SPC),
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS,
+       LGUI(LSFT(KC_4)), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS,
                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS,
                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  TO(MOUSE,1),
@@ -174,14 +174,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS,       KC_F1,         KC_F2,       KC_F3,               KC_F4,                KC_F5,         KC_F6,
        KC_TRNS,       KC_TRNS,       KC_TRNS,     KC_TRNS,             KC_TRNS,              KC_TRNS,       KC_PSCR,
        KC_LGUI,       LCTL(KC_A),    LCTL(KC_S),  LCTL(KC_D),          LCTL(KC_F),           LCTL(KC_G),
-       KC_TRNS,       LCTL(KC_Z),    LCTL(KC_X),  LCTL(KC_C),          LCTL(KC_V),           LGUI(KC_PSCR), LALT(KC_PSCR),
+       KC_TRNS,       LCTL(KC_Z),    LCTL(KC_X),  LCTL(KC_C),          LCTL(KC_V),           LGUI(KC_PSCR), KC_TRNS,
        KC_TRNS,       KC_TRNS,       KC_TRNS,     KC_TRNS,             KC_TRNS,
                                                                                              KC_TRNS,       KC_TRNS,
                                                                                                             KC_TRNS,
                                                                        LCTL(KC_SPC),LCTL(LSFT(KC_A)),       KC_TRNS,
        // right hand
        KC_F7,     KC_F8,   KC_F9,  KC_F10,  KC_F11,  KC_F12,  LALT(KC_GRV),
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS,
+       LALT(KC_PSCR), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS,
                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS,
                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  TO(MOUSE,1),
