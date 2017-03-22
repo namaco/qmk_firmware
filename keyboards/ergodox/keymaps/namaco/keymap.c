@@ -156,7 +156,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __________, __________, __________, __________, __________,
                                                                      __________, __________,
                                                                                  __________,
-                                                        CTL_SP,      GU_SF_A,    __________,
+                                                        CTL_SP,      GU_SF_A,    GUI_SP,
        // right hand
 //      __________, __________, __________, __________, __________,  __________, __________,
         KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,      KC_F12,     GUI_SP,
@@ -166,7 +166,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 __________, __________, __________,  __________, TO(MOUSE,1),
         __________, KC_MUTE,
         __________,
-        __________, KC_VOLD,    LALT(KC_ENT)
+        GUI_SP,     KC_VOLD,    LALT(KC_ENT)
     ),
 
 /* Keymap 3: Function Layer
@@ -204,7 +204,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __________, __________, __________, __________, __________,
                                                                      __________, __________,
                                                                                  __________,
-                                                        CTL_SP,      CT_SF_A,    __________,
+                                                        CTL_SP,      CT_SF_A,    ALT_GRV,
        // right hand
 //      __________, __________, __________, __________, __________,  __________, __________,
         KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,      KC_F12,     ALT_GRV,
@@ -214,7 +214,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 __________, __________, __________,  __________, TO_MOUSE,
         __________, KC_MUTE,
         __________,
-        __________, KC_VOLD,    ALT_ENT
+        ALT_GRV,    KC_VOLD,    ALT_ENT
     ),
 
 /* Keymap 4: Mouse Layer
