@@ -166,11 +166,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 __________, __________, __________,  __________, TO_MOUSE,
         __________, KC_MUTE,
         __________,
-<<<<<<< HEAD
-        GUI_SP,     KC_VOLD,    LALT(KC_ENT)
-=======
-        __________, KC_VOLD,    ALT_ENT
->>>>>>> 0e6b9efbae3c0f6188617618b030383b85473841
+        GUI_SP,     KC_VOLD,    ALT_ENT
     ),
 
 /* Keymap 3: Function Layer
