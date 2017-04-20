@@ -285,6 +285,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 
 // Runs just one time when the keyboard initializes.
 void matrix_init_user(void) {
+    ergodox_led_all_set(LED_BRIGHTNESS_LO);
     ergodox_board_led_off();
     ergodox_right_led_1_on();
     ergodox_right_led_2_on();
