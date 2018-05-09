@@ -3,10 +3,11 @@
 #include "action_layer.h"
 #include "version.h"
 
-#define MAC     0  // default layer (for Mac)
-#define WINDOWS 1  // default layer (for Windows)
-#define MACFN   2  // mac functions
-#define WINFN   3  // win functions
+
+#define WINDOWS 0  // default layer (for Windows)
+#define MAC     1  // default layer (for Mac)
+#define WINFN   2  // win functions
+#define MACFN   3  // mac functions
 #define MOUSE   4  // mouse mode
 
 #define TO_MAC   TO(MAC,1)
